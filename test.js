@@ -41,3 +41,9 @@ var groupedData = jutil.group(arrObj, ['price', 'city']);
 console.log("Data for after grouping :");
 console.log(groupedData);
 
+jutil.groupObject(arrObj,['price','city']).then((groupedData)=>{
+    console.log(groupedData)
+}).catch(err=>{
+    console.log(err);
+});
+

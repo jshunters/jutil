@@ -20,7 +20,7 @@ Include the module
 
 
 
-### for groupig 
+### for grouping 
 
 ```javascript
 //we can pass either a single property
@@ -30,7 +30,7 @@ jutil.group(arrObj,'price');
 jutil.group(arrObj,['price','city']);
 ```
 
-### for sortting
+### for sorting
 
 ```javascript
 // we can pass single property 
@@ -45,7 +45,7 @@ jutil.objSort(arrObj,{'city':1,'state':1,'price':-1});
 
 
 ```javascript
-var jutil = require('@hunters/group-object');
+var jutil = require('@jshunters/jutil');
 // group an object for multiple properties
 
 let arrObj = [{
@@ -82,7 +82,20 @@ var groupedData = jutil.group(arrObj,['price','city']);
 console.log(groupedData); 
 
 var groupedData = jutil.group(arrObj,'city');
-console.log(groupedData); 
+console.log(groupedData);
+
+// asynchronous functions for grouping
+jutil.groupObject(arrObj,['price','city']).then((groupedData)=>{
+    console.log(groupedData)
+}).catch(err=>{
+    console.log(err);
+});
+
+jutil.groupObject(arrObj,'city').then((groupedData)=>{
+    console.log(groupedData)
+}).catch(err=>{
+    console.log(err);
+});
 
 // sort a json object for multiple properties
 let sortedData = jutil.objSort(arrObj,['city','state','price']);

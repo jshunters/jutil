@@ -1,6 +1,6 @@
 {
   "name": "@jshunters/jutil",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript helper functions for json object grouping and sorting",
   "homepage": "http://hunters.vellsoft.in/#groupobject",
   "main": "index.js",
@@ -8,6 +8,8 @@
     "test": "node test.js"
   },
   "keywords": [
+    "javascript utilities",
+    "js utility",
     "groupobject",
     "group-object",
     "group",
