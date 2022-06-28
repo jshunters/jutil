@@ -79,11 +79,19 @@ exports.objSort = function (arr, keys) {
                 if (a_val == b_val) {
                     continue;
                 }
-                return a_val > b_val;
+                // return a_val > b_val;
+                if(a_val > b_val){
+                    return 1;
+                } else if(a_val < b_val) {
+                    return -1;
+                }else {
+                    return 0;
+                }
             }
         } else if ((typeof keys) == 'string') {
             let a_val = a[keys];
             let b_val = b[keys];
+            
             if ((typeof a_val) == 'string') {
                 if (!isNaN(a_val)) {
                     a_val = parseFloat(a_val);
@@ -98,7 +106,14 @@ exports.objSort = function (arr, keys) {
                     b_val = b_val.toUpperCase();
                 }
             }
-            return a_val > b_val;
+            if(a_val > b_val){
+                return 1;
+            } else if(a_val < b_val) {
+                return -1;
+            }else {
+                return 0;
+            }
+            // return a_val > b_val;
         } else if ((typeof keys) == 'object') {
             for (let key in keys) {
                 let a_val = a[key];
@@ -120,10 +135,10 @@ exports.objSort = function (arr, keys) {
                 if (a_val == b_val) {
                     continue;
                 }
-                return keys[key] != -1 ? (a_val > b_val) : !(a_val > b_val);
+                return keys[key] != -1 ? (a_val > b_val ? 1 : -1) : (a_val > b_val ? -1 : 1);
             }
         }
-    })
+    });
 }
 exports.size = function (err, obj) {
     return Object.keys(obj).length;
