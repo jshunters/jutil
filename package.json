@@ -1,6 +1,6 @@
 {
   "name": "@jshunters/jutil",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Javascript helper functions for json object grouping and sorting",
   "homepage": "http://hunters.vellsoft.in/#groupobject",
   "main": "index.js",
