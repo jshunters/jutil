@@ -143,3 +143,13 @@ exports.objSort = function (arr, keys) {
 exports.size = function (err, obj) {
     return Object.keys(obj).length;
 }
+
+exports.chunk = function (arr, chunkSize) {
+    let new_array=[];
+    for (let i = 0; i < arr.length; i += chunkSize) {
+        const chunk = arr.slice(i, i + chunkSize);
+        new_array.push(chunk);
+        // do whatever
+    }
+    return new_array;
+}
