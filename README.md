@@ -43,6 +43,15 @@ jutil.objSort(arrObj,['city','state','price']);
 jutil.objSort(arrObj,{'city':1,'state':1,'price':-1});
 ```
 
+### for others
+
+```javascript
+// to find the size of Object
+jutil.size(arrObj);
+
+// to get chunk of array
+jutil.chunk(arrObj,3);
+```
 
 ```javascript
 var jutil = require('@jshunters/jutil');
@@ -101,13 +110,17 @@ jutil.groupObject(arrObj,'city').then((groupedData)=>{
 let sortedData = jutil.objSort(arrObj,['city','state','price']);
 console.log(sortedData); 
 
-//sort for multiple keys with defined order where 1/-1 is for ascending/descending orders
+// sort for multiple keys with defined order where 1/-1 is for ascending/descending orders
 let sortedData = jutil.objSort(arrObj,{'city':1,'state':1,'price':-1});
 console.log(sortedData); 
 
-//sort for single property
+// sort for single property
 var sortedData = jutil.objSort(arrObj,'city');
 console.log(sortedData); 
+
+// get chunk of array
+var chunk_array = jutil.chunk(arrObj,3);
+console.log(chunk_array); 
 ```
 ## Notes
 

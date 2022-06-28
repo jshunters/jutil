@@ -149,7 +149,6 @@ exports.chunk = function (arr, chunkSize) {
     for (let i = 0; i < arr.length; i += chunkSize) {
         const chunk = arr.slice(i, i + chunkSize);
         new_array.push(chunk);
-        // do whatever
     }
     return new_array;
 }
